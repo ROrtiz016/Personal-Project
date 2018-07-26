@@ -86,7 +86,7 @@ app.get('/auth/callback', async (req, res) => {
   console.log(CALLBACK_URL)
   try{
 
-  
+    console.log("-------------------------------------------------------0")
   let payload = {
     client_id: REACT_APP_CLIENT_ID,
     client_secret: CLIENT_SECRET,
@@ -94,21 +94,25 @@ app.get('/auth/callback', async (req, res) => {
     grant_type: 'authorization_code',
     redirect_uri: CALLBACK_URL
   }
+  console.log("-------------------------------------------------------1")
   try {
   let responseWithToken = await axios.post(`https://${REACT_APP_DOMAIN}/oauth/token`, payload);
   }catch(err){
     console.log('Error in axios.post' , err)
   }
+
+  console.log("-------------------------------------------------------2")
   try {
   let userData = await axios.get(`https://${REACT_APP_DOMAIN}/userinfo?access_token=${responseWithToken.data.access_token}`
   )
   }catch(err){
     console.error('Error is axios.get', err)
   }
-
+  console.log("-------------------------------------------------------3")
   const db = req.app.get('db');
   let { sub, name, picture } = userData.data;
   let userExists = await db.find_user([sub]);
+  console.log("-------------------------------------------------------4")
   if (userExists[0]) {
     req.session.user = userExists[0];
     res.redirect(`${FRONTEND_DOMAIN}/#/Home`)
