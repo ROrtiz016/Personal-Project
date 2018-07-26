@@ -10,14 +10,14 @@ import Notifications, { notify } from 'react-notify-toast';
 class Cart extends Component {
 
   updateQuantity(value, id) {
-    axios.post(`/product/addcart/${id}`, {
+    axios.post(`/api/addcart/${id}`, {
       quantity: value
     }).then(response => this.props.addToCart(response.data))
       .catch(err => console.log(err))
   }
 
   delete(id, user) {
-    axios.delete(`/products/cart/${id}/${user}`)
+    axios.delete(`/api/cart/${id}/${user}`)
       .then(response => { this.props.removeFromCart(response.data) })
       .catch(err => console.log(err))
   }
@@ -28,7 +28,7 @@ class Cart extends Component {
 
   componentDidMount() {
     if (this.props.cart.length === 0) {
-      axios.get('/products/cart').then(res => this.props.addToCart(res.data))
+      axios.get('/api/cart').then(res => this.props.addToCart(res.data))
         .catch(err => console.log(err))
     }
   }
@@ -82,7 +82,7 @@ class Cart extends Component {
     }
     
   onClosed = () => {
-    axios.delete('/products/delcart')
+    axios.delete('/api/delcart')
     .then(response => {this.props.removeFromCart(response.data)} )
     .then(notify.show('Awesomeness is on it\'s way!', 'success', 2500))
     .catch(err => console.log(err))
