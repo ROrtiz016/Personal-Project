@@ -1,0 +1,43 @@
+.popUp{
+  height: 300px;
+  width: 600px;
+  margin: 35%;
+  background-color: rgb(52, 58, 92);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 15%;
+}
+
+.input{
+  margin: 15px;
+}
+
+.editInfo{
+  margin: 10px;
+  font-family: 'Raleway', sans-serif;
+  color: white;
+}
+
+.edit{
+  color: white;
+  position: relative;
+  left: 0px;
+}
+
+.Mbtn{
+ display: flex;
+ justify-content: center
+}
+
+.enterBtn{
+  font-family: 'Raleway', sans-serif;
+  color: white;
+  font-size: 14px;
+  width: 50px;
+  margin-left: 5px;
+}
+
+.popCnt{
+  width: 50px
+}

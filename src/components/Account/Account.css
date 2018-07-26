@@ -1,0 +1,57 @@
+.userPic{
+  height: 175px;
+  widows: 100px;
+  border-radius: 50px;
+  margin: 10px;
+}
+
+.picContnr{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  position: relative;
+  right: 20px;
+}
+
+.info{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 60%;
+  padding: 25px;
+  padding-top:0px;
+  margin-left: 40%;
+  font-size: 22px
+
+}
+
+.AccInfo{
+  color: rgb(250, 248, 248);
+  margin-bottom: 30px;
+  font-family: 'Raleway', sans-serif;
+}
+.edit{
+  width: 50px;
+  position: relative;
+  right: 22px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.backimg{
+  background-image: url(https://c.wallhere.com/photos/ed/fa/street_cityscape_building_New_York_City-120241.jpg!d);
+  background-size: cover;
+  height: 100vh;
+  background-repeat: no-repeat
+}
+
+.InfoBox{
+  background-color: rgba(0, 0, 0, 0.548);
+  position: absolute;
+  top: 20%;
+  width: 100%;
+}
+
+.AccInfo2{
+  font-size: 30px
+}

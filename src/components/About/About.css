@@ -1,0 +1,21 @@
+.about{
+  z-index: 2;
+  height: 250px;
+  width: 500px;
+  margin: 10%;
+  margin-left: 36%;
+  font-family: 'Raleway', sans-serif;
+  padding: 50px;
+}
+
+.editInfo{
+  font-size: 24px;
+}
+
+.abtn{
+  font-size: 24px;
+}
+
+.aboutText{
+  margin: 20px;
+}

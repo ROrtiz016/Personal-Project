@@ -1,0 +1,58 @@
+
+.pImg{
+  width: 175px;
+  size: 150px;
+  border-radius: 8px;
+}
+
+button{
+  border: none;
+  background-color: transparent
+}
+
+.pName{
+  text-align: center;
+  color: white
+}
+
+.pPrice{
+  font-size: 18px;
+  text-align: center;
+  color: whitesmoke
+}
+
+.imgbox{
+ margin: auto;
+ display: flex;
+ justify-content: space-around;
+}
+
+.ProdcApp{
+  background-image: url('http://sfwallpaper.com/images/hd-wallpapers-2560x1440-4.jpg');
+  position: sticky;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 200vh;
+}
+
+.Products{
+  display: flex;
+  flex-wrap: wrap;
+  max-height: 175vh;
+}
+
+.Boxes{
+  margin: 20px;
+  height: 105px;
+  width: 30%;
+  margin-top: 200px;
+
+}
+
+.ProductBox{
+  margin: 5px;
+  width: 150px;
+  height: 75px;
+  margin-left: 37%;
+  font-family: 'Raleway', sans-serif;
+}

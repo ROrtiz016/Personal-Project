@@ -1,0 +1,44 @@
+{
+  "name": "bbt-prjct",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "express-handlebars": "^3.0.0",
+    "express-session": "^1.15.6",
+    "massive": "^5.1.0",
+    "pug": "^2.0.3",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-modal": "^3.5.1",
+    "react-notifications": "^1.4.3",
+    "react-notify-toast": "^0.5.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "react-stripe-checkout": "^2.6.3",
+    "react-stripe-elements": "^2.0.1",
+    "react-toastify": "^4.1.0",
+    "redux": "^4.0.0",
+    "stripe": "^6.3.0",
+    "stripe-checkout": "^1.0.9"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "proxy": {
+    "/api":{
+      "target":"http://localhost:3005"
+    },
+    "/auth":{
+      "target":"http://localhost:3005"
+    }
+  },
+  "main": "./server/server.js"
+}

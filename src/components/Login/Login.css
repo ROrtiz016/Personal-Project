@@ -1,0 +1,59 @@
+*{
+  box-sizing: border-box
+}
+
+.LoginBackground{
+  background-image: url(./imgs/drone1.jpg);
+  height: 100vh;
+  margin: 0px;
+  background-size: cover;
+  position: relative;
+  /* background-attachment: absolute; */
+}
+
+.Tittle{
+  display: flex;
+  justify-content: start;
+  padding-left: 4%;
+  position: absolute;
+  top: 40%;
+  height: 150px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.425)
+}
+
+.login{
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: whitesmoke;
+  text-shadow: 1px 1px rgba(0, 0, 0, 0.452);
+  width: 10%;
+  font-family: 'Raleway', sans-serif;
+}
+
+.nav2{
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  position: relative;
+  top: 20px;
+  right: 20px
+}
+
+.nav3{
+  font-size:20px;
+  margin: 20px;
+  border:none
+}
+
+.Store{
+  color: gold;
+  font-size: 2rem;
+  text-shadow: 2px 1px rgba(0, 0, 0, 0.493);
+  font-family: 'Raleway', sans-serif;
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,61 @@
+.SelImg{
+  width: 450px;
+  margin-left: 150px; 
+  float: left;
+}
+
+.SelectDiv{
+  margin-top: 150px;
+  font-family: 'Raleway', sans-serif; 
+}
+
+.back{
+  width: 1760px
+}
+
+.SelProdName{
+  font-size: 28px;
+  margin-bottom: 15px;
+  margin-left: 40%;
+}
+
+.SelPrice{
+  margin-left: 40%;
+  font-size: 22px;
+  margin-bottom:15px
+}
+
+.descrptn{
+  margin-left: 39%;
+  margin-right:50px;
+  font-size:18px;
+}
+
+.addToCart{
+  font-family: 'Raleway', sans-serif;
+  font-size: 22px;
+  color: blue;
+  float: right;
+  position: relative;
+  right: 6%;
+  margin-top:30px;
+  border: solid black 1px;
+  background-color: gold;
+  box-shadow: 1px 1px; 
+}
+
+.reviews{
+  font-family: 'Raleway', sans-serif;
+  font-size: 24px;
+  margin-top: 150px;
+  position: relative;
+  left: 9%;
+}
+
+.givreviw{
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  left: 9%;
+  margin-top: 5px;
+}
+

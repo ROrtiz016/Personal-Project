@@ -1,0 +1,25 @@
+.nav{
+  margin-top: 0px;
+  width: 100%;
+  background-color: rgba(3, 3, 3, 0.863);
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top:0px;
+}
+
+.nav-button{
+  color: white;
+  font-size: 20px;
+}
+
+.StoreName{
+  margin-right: 75%;
+  margin-top: 25px;
+  font-size: 24px;
+  text-shadow: 1px 1px black;
+  color: gold;
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  left: 50px;
+}

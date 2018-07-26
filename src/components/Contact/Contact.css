@@ -1,0 +1,18 @@
+.about1{
+  z-index: 2;
+  height: 250px;
+  width: 500px;
+  margin: 10%;
+  margin-left: 36%;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.abtn{
+  font-size: 18px;
+}
+
+.contactInfo{
+  margin: 10px;
+}

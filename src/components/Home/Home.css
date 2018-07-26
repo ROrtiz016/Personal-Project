@@ -1,0 +1,58 @@
+*{
+  box-sizing: border-box
+}
+.nav-button{
+  border:none;
+  background-color: transparent;
+  font-family: 'Raleway', sans-serif;
+  padding: 25px
+} 
+
+ .Home{
+  background-image: url(https://wallpaper-house.com/data/out/8/wallpaper2you_247909.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+} 
+
+
+h2{
+  display: flex;
+  justify-content: center;
+  margin: 75px;
+  font-family: 'Raleway', sans-serif;
+  color:whitesmoke;
+}
+.nav{
+  display: flex;
+  align-content: space-between;
+  justify-content: center         
+}
+
+.shadow{
+  background-color: rgba(0, 0, 0, 0.349);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  margin-left: 40%;
+  margin-right: 40%;
+  position: relative;
+  top: 74px;
+}
+
+.Link{
+  text-decoration-line: none;
+  height: 125px;
+  display: flex;
+  align-content: center;
+  flex-direction: column
+}
+
+.buttonSize{
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+  font-size: 28px;
+}
