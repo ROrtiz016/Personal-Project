@@ -22,6 +22,7 @@ let {
   FRONTEND_DOMAIN
 } = process.env
 // console.log(process.env)
+
 app.use(session({
   secret: SESSION_SECRET,
   resave: false,
@@ -82,6 +83,7 @@ app.post('/api/payment', function (req, res, next) {
 //
 
 app.get('/auth/callback', async (req, res) => {
+  console.log(CALLBACK_URL)
   try{
 
   
