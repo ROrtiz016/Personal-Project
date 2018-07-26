@@ -29,7 +29,7 @@ app.use(session({
   saveUninitialized: false
 }))
 
-app.use((req, res, next)=>{console.log(req.url, req.method, req.status); next();})
+// app.use((req, res, next)=>{console.log(req.url, req.method, req.status); next();})
 
 massive(CONNECTION_STRING).then(db => {
   app.set('db', db)
@@ -83,7 +83,6 @@ app.post('/api/payment', function (req, res, next) {
 //
 
 app.get('/auth/callback', async (req, res) => {
-  console.log(CALLBACK_URL)
   let payload = {
     client_id: REACT_APP_CLIENT_ID,
     client_secret: CLIENT_SECRET,
