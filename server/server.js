@@ -94,11 +94,17 @@ app.get('/auth/callback', async (req, res) => {
     grant_type: 'authorization_code',
     redirect_uri: CALLBACK_URL
   }
-
+  try {
   let responseWithToken = await axios.post(`https://${REACT_APP_DOMAIN}/oauth/token`, payload);
-
+  }catch(err){
+    console.log('Error in axios.post' , err)
+  }
+  try {
   let userData = await axios.get(`https://${REACT_APP_DOMAIN}/userinfo?access_token=${responseWithToken.data.access_token}`
   )
+  }catch(err){
+    console.error('Error is axios.get', err)
+  }
 
   const db = req.app.get('db');
   let { sub, name, picture } = userData.data;
