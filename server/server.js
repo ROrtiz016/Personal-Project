@@ -96,14 +96,14 @@ app.get('/auth/callback', async (req, res) => {
   }
   console.log("-------------------------------------------------------1", payload)
   try {
-  let responseWithToken = await axios.post(`https://${REACT_APP_DOMAIN}/oauth/token`, payload);
+  var responseWithToken = await axios.post(`https://${REACT_APP_DOMAIN}/oauth/token`, payload);
   }catch(err){
     console.log('Error in axios.post' , err)
   }
 
   console.log("-------------------------------------------------------2")
   try {
-  let userData = await axios.get(`https://${REACT_APP_DOMAIN}/userinfo?access_token=${responseWithToken.data.access_token}`
+  var userData = await axios.get(`https://${REACT_APP_DOMAIN}/userinfo?access_token=${responseWithToken.data.access_token}`
   )
   }catch(err){
     console.error('Error is axios.get', err)
