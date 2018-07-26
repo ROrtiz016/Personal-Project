@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Modal from 'react-modal'
 import ModalButton from './ModalButton'
 import './About.css'
-import axios from 'axios'
+// import axios from 'axios'
 
 class About extends Component {
   constructor() {
@@ -17,9 +17,9 @@ class About extends Component {
     this.setState(prevState => ({ modalOpened: !prevState.modalOpened }))
   }
 
-  userInfoHandler(){
-    axios.post('/account/userInfo/')
-  }
+  // userInfoHandler(){
+  //   axios.post('/api/account/userInfo/')
+  // }
 
   render() {
     return (

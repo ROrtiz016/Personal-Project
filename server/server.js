@@ -29,7 +29,7 @@ app.use(session({
   saveUninitialized: false
 }))
 
-// app.use((req, res, next)=>{console.log(req.url, req.method, req.status); next();})
+app.use((req, res, next)=>{console.log(req.url, req.method, req.status); next();})
 
 massive(CONNECTION_STRING).then(db => {
   app.set('db', db)

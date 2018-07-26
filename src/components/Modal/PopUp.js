@@ -28,7 +28,7 @@ class PopUp extends Component {
 
   userInfoHandler() {
     const { ageInput:age, addressInput: address, emailInput:email } = this.state
-    axios.put(`/account/userInfo/${age}/${email}/${address}/`)
+    axios.put(`/api/account/userInfo/${age}/${email}/${address}/`)
     .then( user => this.props.getUserData(user.data))
   }
 

@@ -120,6 +120,7 @@ module.exports = {
   delete: (req, res, next) => {
     const { id } = req.params;
     const { id: userId } = req.session.user
+    console.log('DelDebug', id, userId)
     const db = req.app.get('db')
     db.delete([id, userId])
     .then(user => res.status(200).send(user))
