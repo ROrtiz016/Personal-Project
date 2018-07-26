@@ -94,7 +94,7 @@ app.get('/auth/callback', async (req, res) => {
     grant_type: 'authorization_code',
     redirect_uri: CALLBACK_URL
   }
-  console.log("-------------------------------------------------------1")
+  console.log("-------------------------------------------------------1", payload)
   try {
   let responseWithToken = await axios.post(`https://${REACT_APP_DOMAIN}/oauth/token`, payload);
   }catch(err){
