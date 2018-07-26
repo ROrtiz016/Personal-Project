@@ -9,6 +9,8 @@ const mid = require('./middleware');
 const stripe = require('stripe')('process.env.SECRET_KEY')
 const bodyParser = require('body-parser')
 
+app.use(express.static(`${__dirname}/../build`));
+
 let {
   SERVER_PORT,
   REACT_APP_CLIENT_ID,
@@ -124,6 +126,7 @@ app.get('/api/logout', (req, res) => {
   res.redirect(`${FRONTEND_DOMAIN}/#/`)
 })
 
+/////EndPoints//////
 app.get('/api/electronics', controller.getElectProducts)
 app.get('/api/gadgets', controller.getGadgetProducts)
 app.get('/api/outdoors', controller.getOutdoorProducts)
