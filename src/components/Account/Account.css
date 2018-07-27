@@ -55,3 +55,31 @@
 .AccInfo2{
   font-size: 30px
 }
+
+@media (max-width: 500px){
+  .backimg{
+    background-image: url(https://c.wallhere.com/photos/ed/fa/street_cityscape_building_New_York_City-120241.jpg!d);
+    background-size: cover;
+    height: 123vh;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 60%;
+    padding: 25px;
+    padding-top:0px;
+    margin-left: 10%;
+    font-size: 22px
+  }
+
+  .InfoBox{
+    background-color: rgba(0, 0, 0, 0.548);
+    position: absolute;
+    top: 10%;
+    width: 100%;
+  }
+}
