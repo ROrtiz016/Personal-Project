@@ -19,7 +19,8 @@ let {
   CONNECTION_STRING,
   SESSION_SECRET,
   CALLBACK_URL,
-  FRONTEND_DOMAIN
+  FRONTEND_DOMAIN,
+  PROTOCOL
 } = process.env
 // console.log(process.env)
 
@@ -29,7 +30,7 @@ app.use(session({
   saveUninitialized: false
 }))
 
-app.use((req, res, next)=>{console.log(req.url, req.method, req.status); next();})
+// app.use((req, res, next)=>{console.log(req.url, req.method, req.status); next();})
 
 massive(CONNECTION_STRING).then(db => {
   app.set('db', db)
@@ -72,8 +73,8 @@ app.post('/api/payment', function (req, res, next) {
     source: req.body.token.id,
     description: 'Test charge from react app'
   }, function (err, charge) {
-    if (err) return res.sendStatus(500)
-    return res.sendStatus(200)
+    if (err) return res.sendStatus(500).send(err)
+    return res.sendStatus(200).send(charge)
     if (err && err.type === 'StripeCardError') {
       // The card has been declined
     }
@@ -88,7 +89,7 @@ app.get('/auth/callback', async (req, res) => {
     client_secret: CLIENT_SECRET,
     code: req.query.code,
     grant_type: 'authorization_code',
-    redirect_uri: `http://${req.headers.host}/auth/callback`
+    redirect_uri: `${PROTOCOL}://${req.headers.host}/auth/callback`
   }
   
   var responseWithToken = await axios.post(`https://${REACT_APP_DOMAIN}/oauth/token`, payload);

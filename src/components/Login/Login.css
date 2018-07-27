@@ -57,3 +57,14 @@
   display: flex;
   align-items: center;
 }
+
+@media (max-width: 500px){
+  .LoginBackground {
+    max-width: 540px;
+    background-position: center center
+}
+
+.login{
+  margin-left: 30px
+}
+}

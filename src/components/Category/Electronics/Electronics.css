@@ -56,3 +56,47 @@ button{
   margin-left: 37%;
   font-family: 'Raleway', sans-serif;
 }
+
+@media (max-width: 500px){
+
+  .Products{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: initial;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+.pImg{
+  width: 125px;
+  size: 150px;
+  border-radius: 8px;
+  position: relative;
+  left: 15px
+  
+}
+
+.ProductBox{
+  margin: 5px;
+  width: 150px;
+  height: 75px;
+  font-family: 'Raleway', sans-serif;
+}
+
+.Boxes{
+  margin: 20px;
+  height: 105px;
+  width: 30%;
+  margin-top: 160px;
+  position: relative;
+  left: 25%
+}
+
+.ProdcApp{
+  position: sticky;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 600vh;
+  background-position: center center
+}
+}

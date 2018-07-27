@@ -6,3 +6,14 @@
   height: 200vh;
 
 }
+
+@media (max-width: 500px){
+  .ProdcAppRid{
+    position: sticky;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 500vh;
+    background-position: center center
+  }
+  
+}

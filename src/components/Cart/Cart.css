@@ -1,11 +1,45 @@
 .imgStyle{
-  width: 150px;
+  width: 175px;
 }
 
 .CompCart{
   height: auto;
-}
+  /* width: 15%; */
+  margin-top:20px;
+} 
 
 .amount{
   color: darkslategrey;
+}
+
+.ListBoxs{
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+  width: 200px;
+  
+}
+
+.remv{
+  float: right;
+  margin: 10px;
+}
+
+.Text{
+  font-family: 'Raleway', sans-serif;
+}
+
+.qntty{
+  margin: 10px;
+  margin-left: 0px;
+}
+
+.List{
+  position: relative;
+  left: 50%
+}
+
+.amnts{
+  margin-left: 20%;
+  width: 20%
 }

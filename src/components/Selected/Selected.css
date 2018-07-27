@@ -5,12 +5,14 @@
 }
 
 .SelectDiv{
+  position: relative;
   margin-top: 150px;
   font-family: 'Raleway', sans-serif; 
 }
 
 .back{
-  width: 1760px
+  width: 1760px;
+  height: 80vh
 }
 
 .SelProdName{

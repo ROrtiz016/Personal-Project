@@ -6,10 +6,13 @@
   margin-left: 36%;
   font-family: 'Raleway', sans-serif;
   padding: 50px;
+  color: rgb(226, 219, 219);
+  
 }
 
-.editInfo{
+.editUs{
   font-size: 24px;
+  color: white
 }
 
 .abtn{
@@ -18,4 +21,14 @@
 
 .aboutText{
   margin: 20px;
+}
+
+@media (max-width: 500px){
+  .about {
+    max-width: 540px;
+    position: relative;
+    right: 40%;
+    top: 20%;
+    background-color: rgba(0, 0, 0, 0.658)
+}
 }

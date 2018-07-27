@@ -24,6 +24,7 @@ export default class NavBar extends Component {
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
         <nav className='nav'>
           <h3 className='StoreName'>BigBoysToys</h3>
+          <Link to='/Home'><button className='nav-button'>Home</button></Link>
           <Link to='/Cart'><button className='nav-button'>Cart</button></Link>
           <Link to='/Account'><button className='nav-button'>Account</button></Link>
           <a href={`${window.origin}/api/logout`}><button className='nav-button' >Logout</button></a>

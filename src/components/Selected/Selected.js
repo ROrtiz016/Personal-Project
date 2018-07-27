@@ -5,6 +5,7 @@ import { addToCart } from '../../dux/cartReducer'
 import NavBar from '../NavBar/NavBar'
 import './Selected.css'
 import Notifications, { notify } from 'react-notify-toast';
+import Review from '../Review/Review'
 
 
 class Selected extends Component {
@@ -54,7 +55,7 @@ class Selected extends Component {
           <button onClick={() => { this.addToCartHandler() }} className='addToCart'>Add to Cart</button>
         </div>
         <h3 className='reviews'>Customer Reviews:</h3>
-        <h4 className='givreviw'>Give us yours </h4>
+        <h4 className='givreviw'>Give us your <Review/></h4>
       </div>
     )
   }

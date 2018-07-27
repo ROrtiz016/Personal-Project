@@ -5,3 +5,14 @@
   background-attachment: fixed;
   height: 200vh;
 }
+
+@media (max-width: 500px){
+  .ProdcAppLand{
+    position: sticky;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 500vh;
+    background-position: center center
+  }
+  
+}

@@ -1,20 +1,14 @@
 *{
   box-sizing: border-box
 }
-.nav-button{
-  border:none;
-  background-color: transparent;
-  font-family: 'Raleway', sans-serif;
-  padding: 25px
-} 
 
  .Home{
   background-image: url(https://wallpaper-house.com/data/out/8/wallpaper2you_247909.jpg);
   background-repeat: no-repeat;
-  background-size: cover;
   height: 100vh;
   width: 100%;
-  position: fixed;
+  background-attachment: fixed;
+  background-position: center center; 
 } 
 
 
@@ -35,7 +29,7 @@ h2{
   background-color: rgba(0, 0, 0, 0.349);
   display: flex;
   justify-content: center;
-  height: 100vh;
+  height: 92vh;
   margin-left: 40%;
   margin-right: 40%;
   position: relative;
@@ -55,4 +49,21 @@ h2{
   flex-direction: column;
   width: 250px;
   font-size: 28px;
+}
+
+@media (max-width: 500px){
+  .Home {
+    max-width: 100%;
+    background-position: center; 
+    height: 125vh
+  }
+
+  .shadow{
+    width: 50%;
+    position: center;
+    height: 115vh;
+    margin-left: 25%;
+    /* margin-right: 20%; */
+  }
+
 }

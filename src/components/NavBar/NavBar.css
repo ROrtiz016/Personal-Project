@@ -11,10 +11,14 @@
 .nav-button{
   color: white;
   font-size: 20px;
+  border:none;
+  background-color: transparent;
+  font-family: 'Raleway', sans-serif;
+  padding: 25px
 }
 
 .StoreName{
-  margin-right: 75%;
+  margin-right: 70%;
   margin-top: 25px;
   font-size: 24px;
   text-shadow: 1px 1px black;
@@ -22,4 +26,37 @@
   font-family: 'Raleway', sans-serif;
   position: relative;
   left: 50px;
+}
+
+@media (max-width: 500px){
+  .nav {
+    font-size: 20px;
+    right: 0;
+    width: 100%;
+    display: flex;
+    align-items: space-between;
+}
+
+.nav-button{
+  color: white;
+  font-size: 16px;
+  border:none;
+  background-color: transparent;
+  font-family: 'Raleway', sans-serif;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  padding-left: 0px;
+  padding-right: 15px
+}
+
+.StoreName{
+  margin-right: 16%;
+  margin-top: 25px;
+  font-size: 24px;
+  text-shadow: 1px 1px black;
+  color: gold;
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  left: 50px;
+}
 }

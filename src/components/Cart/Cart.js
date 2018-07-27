@@ -37,13 +37,12 @@ class Cart extends Component {
     return this.props.cart.map(
       (cart) => {
         return (
-          <div>
-            <li key={cart.product_id}>
+          <div className='ListBoxs'>
+            <li key={cart.product_id} className='Text'>
               <img src={cart.product_img} className='imgStyle' alt='prdctPic' />
-              {cart.product_name}${this.productPrice(cart.product_price, cart.quantity)}.00
-        <button onClick={() => this.delete(cart.id, cart.user_id)}>Remove</button>
-            </li>
-            <p>Quantity</p>
+              {cart.product_name}Price ${this.productPrice(cart.product_price, cart.quantity)}.00
+        <button onClick={() => this.delete(cart.id, cart.user_id)} className='remv'>Remove</button>
+            <p className='qntty'>Quantity</p>
             <select defaultValue={cart.quantity} onChange={(e) => this.updateQuantity(e.target.value, cart.product_id)}>
               <option value="1">1</option>
               <option value="2">2</option>
@@ -56,6 +55,7 @@ class Cart extends Component {
               <option value="9">9</option>
               <option value="10">10</option>
             </select>
+            </li>
           </div>
         )
       }
@@ -74,7 +74,6 @@ class Cart extends Component {
 
   onToken = (token) => {
     token.card = void 0;
-    console.log('token', token);
     axios.post('/api/payment', { token }).then(response => {
       response.json().then(token=>
         alert(`we are in business, ${token.email}`))
@@ -92,18 +91,19 @@ class Cart extends Component {
     return (
       <div className='CompCart'>
         <NavBar />
-        <div>
+        <div className='amnts'>
         <Notifications />
           <h2 className='amount'>Total:{this.calculateTotal()}</h2>
           <StripeCheckout
-            data-image='https://stripe.com/img/documentation/checkout/marketplace.png'
+            name='Big Boys Toys'
+            image='https://stripe.com/img/documentation/checkout/marketplace.png'
             stripeKey='pk_test_ZIysRjRPimXpOT1x4NVoRugH'
             token={this.onToken}
             amount={this.total * 100}
             currency="USD"
             closed={this.onClosed}
           />
-          <ul>
+          <ul className='List'>
             {this.createListItems()}
           </ul>
         </div>
