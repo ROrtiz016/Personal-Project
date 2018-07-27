@@ -12,18 +12,14 @@
 } 
 
 
-h2{
+.CatgName{
   display: flex;
   justify-content: center;
   margin: 75px;
   font-family: 'Raleway', sans-serif;
   color:whitesmoke;
 }
-.nav{
-  display: flex;
-  align-content: space-between;
-  justify-content: center         
-}
+
 
 .shadow{
   background-color: rgba(0, 0, 0, 0.349);

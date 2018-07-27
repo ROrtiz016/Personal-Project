@@ -22,12 +22,12 @@ export default class NavBar extends Component {
     return (
       <div>
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
-        <nav className='nav'>
-          <h3 className='StoreName'>BigBoysToys</h3>
-          <Link to='/Home'><button className='nav-button'>Home</button></Link>
-          <Link to='/Cart'><button className='nav-button'>Cart</button></Link>
-          <Link to='/Account'><button className='nav-button'>Account</button></Link>
-          <a href={`${window.origin}/api/logout`}><button className='nav-button' >Logout</button></a>
+        <nav className='nav2'>
+          <h3 className='StoreName2'>BigBoysToys</h3>
+          <Link to='/Home'><button className='nav-button2'>Home</button></Link>
+          <Link to='/Cart'><button className='nav-button2'>Cart</button></Link>
+          <Link to='/Account'><button className='nav-button2'>Account</button></Link>
+          <a href={`${window.origin}/api/logout`}><button className='nav-button2' >Logout</button></a>
         </nav>
       </div>
     )

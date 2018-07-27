@@ -91,9 +91,9 @@ class Cart extends Component {
     return (
       <div className='CompCart'>
         <NavBar />
-        <div className='amnts'>
         <Notifications />
-          <h2 className='amount'>Total:{this.calculateTotal()}</h2>
+        <div className='amnts'>
+        <h2 className='amount'>Total:{this.calculateTotal()}</h2>
           <StripeCheckout
             name='Big Boys Toys'
             image='https://stripe.com/img/documentation/checkout/marketplace.png'
@@ -102,6 +102,7 @@ class Cart extends Component {
             amount={this.total * 100}
             currency="USD"
             closed={this.onClosed}
+            className='Pay'
           />
           <ul className='List'>
             {this.createListItems()}

@@ -1,14 +1,15 @@
-.nav{
+.nav2{
   margin-top: 0px;
   width: 100%;
-  background-color: rgba(3, 3, 3, 0.863);
+  background-color: rgba(3, 3, 3, 0.951);
   display: flex;
   justify-content: flex-end;
   position: fixed;
   top:0px;
+  z-index: 2;
 }
 
-.nav-button{
+.nav-button2{
   color: white;
   font-size: 20px;
   border:none;
@@ -17,7 +18,7 @@
   padding: 25px
 }
 
-.StoreName{
+.StoreName2{
   margin-right: 70%;
   margin-top: 25px;
   font-size: 24px;
@@ -26,10 +27,11 @@
   font-family: 'Raleway', sans-serif;
   position: relative;
   left: 50px;
+  bottom:25px;
 }
 
 @media (max-width: 500px){
-  .nav {
+  .nav2 {
     font-size: 20px;
     right: 0;
     width: 100%;
@@ -37,7 +39,7 @@
     align-items: space-between;
 }
 
-.nav-button{
+.nav-button2{
   color: white;
   font-size: 16px;
   border:none;
@@ -49,7 +51,7 @@
   padding-right: 15px
 }
 
-.StoreName{
+.StoreName2{
   margin-right: 16%;
   margin-top: 25px;
   font-size: 24px;
@@ -57,6 +59,6 @@
   color: gold;
   font-family: 'Raleway', sans-serif;
   position: relative;
-  left: 50px;
+  
 }
 }

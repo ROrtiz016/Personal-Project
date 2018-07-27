@@ -39,7 +39,7 @@ class Selected extends Component {
 
     return (
 
-      <div className='back'>
+      <div className='Selback'>
         <NavBar />
         <div>
           <div>

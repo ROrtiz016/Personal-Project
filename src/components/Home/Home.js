@@ -13,12 +13,12 @@ export default class Home extends Component {
           <NavBar />
           <div className='shadow'>
             <div className='buttonSize'>
-              <Link to='/Electronics' className='Link'><h2>Electronics</h2></Link>
-              <Link to='/Gadgets' className='Link'><h2>Gadgets</h2></Link>
-              <Link to='/Outdoors' className='Link'><h2>Outdoors</h2></Link>
-              <Link to='/Sea' className='Link'><h2>Sea</h2></Link>
-              <Link to='/Land' className='Link'><h2>Land</h2></Link>    
-              <Link to='/Riding' className='Link'><h2>Riding</h2></Link>
+              <Link to='/Electronics' className='Link'><h2 className='CatgName'>Electronics</h2></Link>
+              <Link to='/Gadgets' className='Link'><h2 className='CatgName'>Gadgets</h2></Link>
+              <Link to='/Outdoors' className='Link'><h2 className='CatgName'>Outdoors</h2></Link>
+              <Link to='/Sea' className='Link'><h2 className='CatgName'>Sea</h2></Link>
+              <Link to='/Land' className='Link'><h2 className='CatgName'>Land</h2></Link>    
+              <Link to='/Riding' className='Link'><h2 className='CatgName'>Riding</h2></Link>
             </div>
           </div>
         </div>
