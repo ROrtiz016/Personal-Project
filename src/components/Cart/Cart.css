@@ -33,6 +33,13 @@
   
 }
 
+.userPic1{
+  height: 175px;
+  widows: 100px;
+  border-radius: 50px;
+  margin: 10px;
+}
+
 .remv{
   float: right;
   margin: 10px;
