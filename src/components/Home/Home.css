@@ -56,8 +56,7 @@
   }
 
   .shadow{
-    width: 50%;
-    position: fixed;
+    width: 50%;  
     height: 115vh;
     margin-left: 25%;
     /* margin-right: 20%; */
