@@ -6,6 +6,7 @@
   height: auto;
   width: 100%;
   margin-top:120px;
+  z-index: -1;
 } 
 
 .amount{
@@ -28,6 +29,7 @@
   justify-content: center;
   margin: 30px;
   width: 200px;
+  z-index: -1;
   
 }
 
@@ -59,13 +61,13 @@
   position: relative;
   margin-left: 54.5%;
   margin-top: 15px;
+  z-index: 0;
 }
 
 .userinfo2{
   width: 600px;
   height: 500px;
   position: fixed;
-  z-index: 2;
   left: 50%;
   bottom: 20%
 }
@@ -86,16 +88,13 @@
 @media (max-width: 500px){
   .userinfo2{
     width: 405px;
-    height: 310px;
+    height: 130px;
     left: 1%;
-    z-index: 1;
     bottom: 1px;
-    display: none
   }
 
   .usersDisplay{
-    display: none;
-    height: 290px;
+    height: 100px;
     width: auto;
     background-color: rgba(0, 0, 0, 0.658);
     padding: 15px;
@@ -121,5 +120,9 @@
     font-size: 26px;
     font-family: 'Raleway', sans-serif;
     top: 90px;
+  }
+
+  .userPic1{
+    display:none
   }
 }

@@ -1,12 +1,14 @@
 .popUp{
   height: 300px;
-  width: 600px;
-  margin: 35%;
+  width: 405px;
+  margin: 1%;
   background-color: rgb(52, 58, 92);
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   margin-top: 15%;
+  position: relative;
+  top: 20%
 }
 
 .input{

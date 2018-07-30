@@ -98,7 +98,7 @@ class Cart extends Component {
     let { user } = this.props
     return (
       <div className='usersDisplay'>
-        <img src={user.user_pic} alt="" className='userPic' />
+        <img src={user.user_pic} alt="" className='userPic1' />
         <h3 className='AccntInfo2'>User:{user.user_name}</h3>
         <p className='AccntInfo2'>Address: {user.user_address}</p>
       </div>
@@ -128,7 +128,7 @@ class Cart extends Component {
           </ul>
         </div>
         <div className='userinfo2'>
-          <h1 className='Send'>Send to...</h1>
+          <h1 className='Send'>Ship to...</h1>
           {this.userInfoDisplay()}
         </div>
       </div>

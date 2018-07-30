@@ -45,6 +45,7 @@
   flex-direction: column;
   width: 250px;
   font-size: 28px;
+  z-index: 0;
 }
 
 @media (max-width: 500px){
@@ -56,10 +57,11 @@
 
   .shadow{
     width: 50%;
-    position: center;
+    position: fixed;
     height: 115vh;
     margin-left: 25%;
     /* margin-right: 20%; */
+    background-attachment: fixed;
   }
 
 }
