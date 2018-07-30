@@ -23,7 +23,7 @@ class Account extends Component {
           <NavBar/>
         </div>
           <div className='InfoBox'>
-          <h2 className='AccntInfo2'>Account Information</h2>
+          <h2 className='AccntInfo01'>Account Information</h2>
           <div className='picContnr'>
           <img src={user.user_pic} className='userPic' alt='userImg'/>
           </div>

@@ -26,11 +26,20 @@
 
 }
 
+.AccntInfo01{
+  color: rgb(250, 248, 248);
+  margin-bottom: 30px;
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  font-size: 26px;
+}
+
 .AccntInfo2{
   color: rgb(250, 248, 248);
   margin-bottom: 30px;
   font-family: 'Raleway', sans-serif;
 }
+
 .edit{
   width: 50px;
   position: relative;
