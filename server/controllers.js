@@ -1,3 +1,5 @@
+const stripe = require('stripe')(process.env.SECRET_KEY);
+
 module.exports = {
 
   //Electronic Product Request////////////////////
@@ -155,6 +157,29 @@ module.exports = {
       })
       console.log(err)
     })
-  }
+  },
+
+//Stripe Setup ////////////////////
+
+    handlePayment: (req, res) => {
+        const { amount, token:{id}} = req.body
+        stripe.charges.create(
+            {
+                amount: amount,
+                currency: "usd",
+                source: id,
+                description: "charge from Ruben"
+            },
+            (err, charge) => {
+                if(err) {
+                    console.log(err)
+                    return res.status(500).send(err)
+                } else {
+                    console.log(charge)
+                    return res.status(200).send(charge)
+                }
+            }
+        )
+    }
 
 }

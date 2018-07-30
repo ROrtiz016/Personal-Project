@@ -31,22 +31,26 @@
   text-shadow: 1px 1px rgba(0, 0, 0, 0.452);
   width: 10%;
   font-family: 'Raleway', sans-serif;
+  cursor: pointer;
+  margin-top: 54px;
+  height: 20px;
 }
 
-.nav2{
+.nav4{
   width: 100%;
   display: flex;
   align-items: flex-end;
   justify-content: flex-end;
   position: relative;
   top: 20px;
-  right: 20px
+  right: 20px;
 }
 
 .nav3{
   font-size:20px;
   margin: 20px;
-  border:none
+  border:none;
+  cursor: pointer;
 }
 
 .Store{

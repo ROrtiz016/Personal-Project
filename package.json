@@ -10,6 +10,7 @@
     "express-handlebars": "^3.0.0",
     "express-session": "^1.15.6",
     "massive": "^5.1.0",
+    "nodemon": "^1.18.3",
     "pug": "^2.0.3",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
@@ -33,11 +34,11 @@
     "eject": "react-scripts eject"
   },
   "proxy": {
-    "/api":{
-      "target":"http://localhost:3005"
+    "/api": {
+      "target": "http://localhost:3005"
     },
-    "/auth":{
-      "target":"http://localhost:3005"
+    "/auth": {
+      "target": "http://localhost:3005"
     }
   },
   "main": "./server/server.js"

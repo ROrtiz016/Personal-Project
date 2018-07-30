@@ -6,7 +6,6 @@ const massive = require('massive')
 const axios = require('axios')
 const controller = require('./controllers')
 const mid = require('./middleware');
-const stripe = require('stripe')('process.env.SECRET_KEY')
 const bodyParser = require('body-parser')
 
 app.use(express.static(`${__dirname}/../build`));
@@ -22,13 +21,15 @@ let {
   FRONTEND_DOMAIN,
   PROTOCOL
 } = process.env
-// console.log(process.env)
+
+app.use(bodyParser.json());
 
 app.use(session({
   secret: SESSION_SECRET,
   resave: false,
   saveUninitialized: false
 }))
+
 
 // app.use((req, res, next)=>{console.log(req.url, req.method, req.status); next();})
 
@@ -39,49 +40,6 @@ massive(CONNECTION_STRING).then(db => {
 app.use(express.json())
 app.use(mid.bypassAuthInDevelopment)
 
-
-//Stripe Setup 
-app.set("view engine", "pug");
-app.use(require("body-parser").urlencoded({ extended: false }));
-
-app.post('/api/payment', function (req, res, next) {
-  //convert amount to pennies
-  const amountArray = req.body.amount.toString().split('');
-  const pennies = [];
-  for (var i = 0; i < amountArray.length; i++) {
-    if (amountArray[i] === ".") {
-      if (typeof amountArray[i + 1] === "string") {
-        pennies.push(amountArray[i + 1]);
-      } else {
-        pennies.push("0");
-      }
-      if (typeof amountArray[i + 2] === "string") {
-        pennies.push(amountArray[i + 2]);
-      } else {
-        pennies.push("0");
-      }
-      break;
-    } else {
-      pennies.push(amountArray[i])
-    }
-  }
-  const convertedAmt = parseInt(pennies.join(''));
-
-  const charge = stripe.charges.create({
-    amount: convertedAmt, // amount in cents, again
-    currency: 'usd',
-    source: req.body.token.id,
-    description: 'Test charge from react app'
-  }, function (err, charge) {
-    if (err) return res.sendStatus(500).send(err)
-    return res.sendStatus(200).send(charge)
-    if (err && err.type === 'StripeCardError') {
-      // The card has been declined
-    }
-  });
-});
-
-//
 
 app.get('/auth/callback', async (req, res) => {
   let payload = {
@@ -138,6 +96,7 @@ app.delete('/api/cart/:id/:user', controller.delete)
 app.delete('/api/delcart', controller.deleteAllCart)
 app.get('/api/cart', controller.getUserCart)
 app.put('/api/account/userInfo/:age/:email/:address/', controller.userUpdate)
+app.post('/api/payment', controller.handlePayment)
 
 
 app.listen(SERVER_PORT, () => {

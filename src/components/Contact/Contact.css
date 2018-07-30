@@ -7,8 +7,15 @@
   padding: 50px;
   display: flex;
   flex-direction: column;
-  color: white;
+  color: rgb(41, 41, 41);
   font-family: 'Raleway', sans-serif;
+  font-size: 22px
+}
+
+.editInfo1{
+  font-family: 'Raleway', sans-serif;
+  color: black;
+  
 }
 
 .abtn{
@@ -25,6 +32,7 @@
     position: relative;
     right: 40%;
     top: 20%;
-    background-color: rgba(0, 0, 0, 0.658)
+    background-color: rgba(0, 0, 0, 0.658);
+    color: white;
 }
 }

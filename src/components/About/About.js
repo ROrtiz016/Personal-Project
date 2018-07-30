@@ -27,7 +27,7 @@ class About extends Component {
           isOpen={this.state.modalOpened}
           onRequestClose={this.toggleModal}
           contentLabel="Modal with image">
-            <h3 className='aboutUs'>About Us</h3>
+            <h2 className='aboutUs'>About Us</h2>
             <h4 className='aboutText'>Big Boy Toys is a E-commerce app dedicated to find all the new fun stuff that big guys are looking for such as the latests Toys for outdoors, electronics, gadgets and more. Login, take a look, order, and have fun! </h4>
         </Modal>
       </div>

@@ -8,8 +8,21 @@ export default class NavBar extends Component {
     super();
     this.state = {
       user: null,
+      toggleAnimation: false
     };
-    this.logout = this.logout.bind(this);  
+    this.logout = this.logout.bind(this);
+  }
+
+  toggleNav() {
+    this.setState({
+      showNav: !this.state.showNav
+    })
+  }
+
+  toggleAnimation() {
+    this.setState({
+      toggleAnimation: !this.state.toggleAnimation
+    })
   }
 
   logout() {
@@ -22,13 +35,16 @@ export default class NavBar extends Component {
     return (
       <div>
         <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
-        <nav className='nav2'>
-          <h3 className='StoreName2'>BigBoysToys</h3>
-          <Link to='/Home'><button className='nav-button2'>Home</button></Link>
-          <Link to='/Cart'><button className='nav-button2'>Cart</button></Link>
-          <Link to='/Account'><button className='nav-button2'>Account</button></Link>
-          <a href={`${window.origin}/api/logout`}><button className='nav-button2' >Logout</button></a>
-        </nav>
+        <div className={this.state.showNav ? 'show-nav mobile-nav' : 'mobile-nav'} >
+          <nav className='nav2'>
+            <h3 className='StoreName2'>BigBoysToys</h3>
+            <div></div>
+            <Link to='/Home'><button className='nav-button2'>Home</button></Link>
+            <Link to='/Cart'><button className='nav-button2'>Cart</button></Link>
+            <Link to='/Account'><button className='nav-button2'>Account</button></Link>
+            <a href={`${window.origin}/api/logout`}><button className='nav-button2' >Logout</button></a>
+          </nav>
+          </div>
       </div>
     )
   }

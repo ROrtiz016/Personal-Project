@@ -13,7 +13,6 @@ class Account extends Component {
     axios.get('/api/user-data').then(res=>{
       this.props.getUserData(res.data)
     })
-
   }
 
   render() {
@@ -24,15 +23,15 @@ class Account extends Component {
           <NavBar/>
         </div>
           <div className='InfoBox'>
-          <h2 className='AccInfo2'>Account Information</h2>
+          <h2 className='AccntInfo2'>Account Information</h2>
           <div className='picContnr'>
           <img src={user.user_pic} className='userPic' alt='userImg'/>
           </div>
         <div className='info'>
-          <h4 className='AccInfo'>User: {user.user_name}</h4>
-          <p className='AccInfo'>email: {user.user_email}</p>
-          <p className='AccInfo'>age: {user.user_age}</p>
-          <p className='AccInfo'>address: {user.user_address}</p>
+          <h4 className='AccntInfo2'>User: {user.user_name}</h4>
+          <p className='AccntInfo2'>email: {user.user_email}</p>
+          <p className='AccntInfo2'>age: {user.user_age}</p>
+          <p className='AccntInfo2'>address: {user.user_address}</p>
           <PopUp
           
                  />

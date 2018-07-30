@@ -27,7 +27,7 @@ class Contact extends Component {
           isOpen={this.state.modalOpened}
           onRequestClose={this.toggleModal}
           contentLabel="Modal with image">
-          <h3 className='editInfo'>Fell free to contact Us</h3>
+          <h3 className='editInfo1'>Fell free to contact Us</h3>
           <div>
             <h4 className='contactInfo'>Email: contact@BBT.com</h4>
             <h4 className='contactInfo'>Customer Service: 1-800-852-9458</h4>

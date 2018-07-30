@@ -16,7 +16,7 @@ export default function Login() {
   return (
     <div className='LoginBackground'>
       <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
-      <nav className='nav2'>
+      <nav className='nav4'>
         <About className='nav3' />
         <Contact className='nav3' />
       </nav>
