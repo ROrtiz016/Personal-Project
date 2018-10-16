@@ -22,16 +22,12 @@ let {
   PROTOCOL
 } = process.env
 
-app.use(bodyParser.json());
-
 app.use(session({
   secret: SESSION_SECRET,
   resave: false,
   saveUninitialized: false
 }))
 
-
-// app.use((req, res, next)=>{console.log(req.url, req.method, req.status); next();})
 
 massive(CONNECTION_STRING).then(db => {
   app.set('db', db)

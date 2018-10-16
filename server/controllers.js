@@ -159,8 +159,7 @@ module.exports = {
     })
   },
 
-//Stripe Setup ////////////////////
-
+//////////Stripe Setup ///////////
     handlePayment: (req, res) => {
         const { amount, token:{id}} = req.body
         stripe.charges.create(

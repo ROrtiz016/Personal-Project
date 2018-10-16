@@ -41,5 +41,8 @@
       "target": "http://localhost:3005"
     }
   },
-  "main": "./server/server.js"
+  "main": "./server/server.js",
+  "devDependencies": {
+    "cypress": "^3.0.3"
+  }
 }

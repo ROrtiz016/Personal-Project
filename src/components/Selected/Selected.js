@@ -5,7 +5,7 @@ import { addToCart } from '../../dux/cartReducer'
 import NavBar from '../NavBar/NavBar'
 import './Selected.css'
 import Notifications, { notify } from 'react-notify-toast';
-import Review from '../Review/Review'
+// import Review from '../Review/Review'
 
 
 class Selected extends Component {
@@ -19,8 +19,7 @@ class Selected extends Component {
 
   componentDidMount() {
     axios.get(`/api/selectproduct/${this.props.match.params.id}`).then(res => {
-      this.props.addToCartHandler;
-      this.setState({ product: res.data[0] })
+           this.setState({ product: res.data[0] })
 
     })
   }
@@ -46,7 +45,7 @@ class Selected extends Component {
             <Notifications />
           </div>
           <div className='SelectDiv'>
-            <img className='SelImg' src={this.state.product.product_img} alt='smsngS8' />
+            <img className='SelImg' src={this.state.product.product_img} alt='Product' />
             <h3 className='SelProdName'>{this.state.product.product_name}</h3>
             <p className='SelPrice'>Price ${this.state.product.product_price}.00</p>
             <p className='descrptn'>{this.state.product.product_description}</p>
@@ -54,8 +53,8 @@ class Selected extends Component {
           </div>
           <button onClick={() => { this.addToCartHandler() }} className='addToCart'>Add to Cart</button>
         </div>
-        <h3 className='reviews'>Customer Reviews:</h3>
-        <h4 className='givreviw'>Give us your <Review/></h4>
+        {/* <h3 className='reviews'>Customer Reviews:</h3>
+        <h4 className='givreviw'>Give us your <Review/></h4> */}
       </div>
     )
   }
