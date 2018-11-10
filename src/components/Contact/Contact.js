@@ -30,7 +30,7 @@ class Contact extends Component {
           <h3 className='editInfo1'>Fell free to contact Us</h3>
           <div>
             <h4 className='contactInfo'>Email: contact@BBT.com</h4>
-            <h4 className='contactInfo'>Customer Service: 1-800-852-9458</h4>
+            <h4 className='contactInfo'>Customer Service: 1-800-123-1234</h4>
             <h4 className='contactInfo'>Phone: 987-123-4567</h4>
             <h4 className='contactInfo'>Facebook: BigBoyToys</h4>
           </div>

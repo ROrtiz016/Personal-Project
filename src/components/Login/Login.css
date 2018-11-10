@@ -2,15 +2,6 @@
   box-sizing: border-box
 }
 
-.LoginBackground{
-  background-image: url(./imgs/drone1.jpg);
-  height: 100vh;
-  margin: 0px;
-  background-size: cover;
-  position: relative;
-  /* background-attachment: absolute; */
-}
-
 .Tittle{
   display: flex;
   justify-content: start;
@@ -23,7 +14,7 @@
 }
 
 .login{
-  font-size: 2rem;
+  font-size: 2.5rem;
   border: none;
   outline: none;
   background-color: transparent;
@@ -34,6 +25,12 @@
   cursor: pointer;
   margin-top: 54px;
   height: 20px;
+  transition: .5s;
+}
+
+.login:hover{
+  color: gold;
+  transition: .5s;
 }
 
 .nav4{
@@ -55,7 +52,7 @@
 
 .Store{
   color: gold;
-  font-size: 2rem;
+  font-size: 3rem;
   text-shadow: 2px 1px rgba(0, 0, 0, 0.493);
   font-family: 'Raleway', sans-serif;
   display: flex;

@@ -2,6 +2,7 @@ import React from 'react'
 import './Login.css'
 import About from '../About/About';
 import Contact from '../Contact/Contact'
+import Carousel from '../Carousel/Carousel'
 import '../../reset.css'
 
 export default function Login() {
@@ -14,7 +15,8 @@ export default function Login() {
   }
 
   return (
-    <div className='LoginBackground'>
+    <div>
+      <Carousel/>
       <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" />
       <nav className='nav4'>
         <About className='nav3' />

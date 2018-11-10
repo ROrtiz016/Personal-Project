@@ -7,14 +7,26 @@
   padding: 50px;
   display: flex;
   flex-direction: column;
-  color: rgb(41, 41, 41);
+  color: rgb(253, 251, 251);
   font-family: 'Raleway', sans-serif;
-  font-size: 22px
+  font-size: 22px;
+  animation: fadeIn 1s;
+  background:  rgb(70, 67, 67);
+  
+}
+
+@keyframes fadeIn{
+  from {
+    opacity: 0;
+  }
+  to{
+    opacity: 1
+  }
 }
 
 .editInfo1{
   font-family: 'Raleway', sans-serif;
-  color: black;
+  font-weight: bold
   
 }
 
