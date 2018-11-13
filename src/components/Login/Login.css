@@ -1,5 +1,6 @@
 *{
-  box-sizing: border-box
+  box-sizing: border-box;
+  overflow:hidden;
 }
 
 .Tittle{
@@ -10,7 +11,9 @@
   top: 40%;
   height: 150px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.425)
+  background-color: rgba(0, 0, 0, 0.425);
+  animation-name: shadow;
+  animation-duration: 1s;
 }
 
 .login{
@@ -24,8 +27,11 @@
   font-family: 'Raleway', sans-serif;
   cursor: pointer;
   margin-top: 54px;
-  height: 20px;
+  height: 50px;
   transition: .5s;
+  text-decoration: none;
+  animation-name: login;
+  animation-duration: 4s;
 }
 
 .login:hover{
@@ -57,6 +63,42 @@
   font-family: 'Raleway', sans-serif;
   display: flex;
   align-items: center;
+  animation-name: storeName;
+  animation-duration: 2s;
+  position: relative;
+  width: 400px;
+}
+
+.background{
+  height: 99.72vh;
+  width: 100%;
+  animation-name: fadeIn;
+  animation-duration: 6s;
+}
+
+@keyframes login{
+  0%{opacity: 0}
+  25%{opacity: 0}
+  50%{opacity: 0}
+  100%{opacity: 1}
+}
+
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+} 
+
+@keyframes storeName{
+  0% {left: -450px;}
+  100% {left: 0px;}
+}
+
+@keyframes shadow{
+  0% {opacity: 0;}
+  25% {opacity: 0;}
+  50%{opacity: 0;}
+  75%{opacity: 1;}
+  100%{opacity: 1;}
 }
 
 @media (max-width: 500px){
@@ -64,6 +106,7 @@
     max-width: 540px;
     background-position: center center
 }
+
 
 .login{
   margin-left: 30px

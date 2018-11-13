@@ -31,6 +31,13 @@ export default class NavBar extends Component {
     });
   }
 
+  login() {
+    let { REACT_APP_DOMAIN, REACT_APP_CLIENT_ID } = process.env
+    let redirectIUri = encodeURIComponent(`${window.origin}/auth/callback`)
+
+    window.location = `https://${REACT_APP_DOMAIN}/authorize?client_id=${REACT_APP_CLIENT_ID}&scope=openid%20profile%20email&redirect_uri=${redirectIUri}&response_type=code`;
+  }
+
   render() {
     return (
       <div>
@@ -41,6 +48,7 @@ export default class NavBar extends Component {
             <div></div>
             <Link to='/Home'><button className='nav-button2'>Home</button></Link>
             <Link to='/Cart'><button className='nav-button2'>Cart</button></Link>
+            <h3 onClick={this.login} className='nav-button2'>Login</h3>
             <Link to='/Account'><button className='nav-button2'>Account</button></Link>
             <a href={`${window.origin}/api/logout`}><button className='nav-button2' >Logout</button></a>
           </nav>

@@ -20,7 +20,7 @@
 }
 
 .StoreName2{
-  margin-right: 71%;
+  margin-right: 60%;
   margin-top: 50px;
   font-size: 24px;
   text-shadow: 1px 1px black;
@@ -29,6 +29,8 @@
   position: relative;
   left: 50px;
   bottom:25px;
+  width: 300px;
+  height: 30px;
 }
 
 @media (max-width: 500px){

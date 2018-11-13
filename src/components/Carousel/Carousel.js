@@ -9,7 +9,6 @@ import skate from '../imgs/skateboarding.png'
 
 class Carousel extends Component {
 
-
 componentDidMount(){
   var slideIndex = 0;
   showSlides();
@@ -43,7 +42,7 @@ componentDidMount(){
             <img src={skate} alt="" className='slideImage' />
             {/* <div className='text'></div> */}
           </div>
-          
+
           <div className='mySlides fade'>
             <div className='numberText'></div>
             <img src={scuba} alt="" className='slideImage' />

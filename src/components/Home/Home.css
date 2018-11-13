@@ -1,51 +1,109 @@
 *{
-  box-sizing: border-box
+  box-sizing: border-box;
+  overflow: initial;
+}
+
+.back{
+  height: 100vh;
+  width: 100%;
+  /* border: 2px solid red; */
 }
 
  .Home{
-  background-image: url(https://wallpaper-house.com/data/out/8/wallpaper2you_247909.jpg);
+  background-image: url(https://demo.themegrill.com/explore/wp-content/uploads/sites/47/2016/06/travel-1233762_1920-e1466592103871.jpg);
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 70vh;
   width: 100%;
   background-attachment: fixed;
   background-position: center center; 
 } 
 
+.CatContainer{
+  height: 60vh;
+  width: 1200px;
+  position: relative;
+  left: 400px;
+  animation-name: CatContainer;
+  animation-duration: 2s
+}
 
 .CatgName{
   display: flex;
-  justify-content: center;
-  margin: 75px;
   font-family: 'Raleway', sans-serif;
   color:whitesmoke;
+  font-size: 2.5rem;
+  height: 50px;
+  transition: 1s;
 }
 
+.CatgName:hover{
+  color: gold;
+  transition: 1s;
+}
 
-.shadow{
-  background-color: rgba(0, 0, 0, 0.349);
-  display: flex;
-  justify-content: center;
-  height: 92vh;
-  margin-left: 40%;
-  margin-right: 40%;
+.text{
+  color: white;
+  font-size: 3rem;
   position: relative;
-  top: 74px;
+  z-index: 0;
+  top: 15%;
+  text-align: center;
+  text-shadow: 1px 1px 1px black;
+  font-family: 'Raleway', sans-serif;
+  position: relative;
+  animation-name: explore;
+  animation-duration: 1s;
 }
+
 
 .Link{
   text-decoration-line: none;
-  height: 125px;
   display: flex;
   align-content: center;
-  flex-direction: column
+  flex-direction: column;
+  text-shadow: 1px 1px black;
+  width: 240px;
+}
+
+.NameContainer{
+  height: 100px;
+  width: 260px;
+  background: rgba(0, 0, 0, 0.449);
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  align-items: center;
+  border-radius: 5px;
+  transition: 1s;
+}
+
+.NameContainer:hover{
+  background: black;
+  transition: 1s;
 }
 
 .buttonSize{
   display: flex;
-  flex-direction: column;
-  width: 250px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  align-items: center;
   font-size: 28px;
   z-index: 0;
+  height: 80vh;
+}
+
+@keyframes explore{
+  0% {top: -10px}
+  100% {top: 98px;}
+}
+
+@keyframes CatContainer{
+  0%  {opacity: 0;}
+  50% {opacity: 0;}
+  100%{opacity: 1;}
 }
 
 @media (max-width: 500px){
