@@ -24,7 +24,7 @@ class Footer extends Component {
 
           <div>
             <h2>NEWS LETTER</h2>
-            <p>Sign in for the latest news, offers, and styles</p>
+            <p className='AbtCntct'>Sign in for the latest news, offers, and styles</p>
             <input type="text" placeholder='Your email' className='e-mail' />
             <button className='send'>
               <i className="fas fa-angle-right"></i>
@@ -35,7 +35,6 @@ class Footer extends Component {
 
         <div className='bottom'>
           <h3>2018 BIG BOYS TOYS ecommerce software</h3>
-          <h3></h3>
 
           <div>
             <img src="https://18f0uvkdanva8ka03usq5z6i-wpengine.netdna-ssl.com/wp-content/uploads/2017/08/visa-logo.png" alt="VISA" className='payment'/>
