@@ -3,6 +3,7 @@ import axios from 'axios'
 import './Sea.css'
 import { Link } from 'react-router-dom'
 import NavBar from '../../NavBar/NavBar'
+import Footer from '../../Footer/Footer'
 
 export default class Sea extends Component {
   constructor() {
@@ -24,7 +25,11 @@ export default class Sea extends Component {
       return (
         <div key={el.product_id} className='Boxes'>
           <div className='imgbox'>
-            <Link to={`/selectproduct/${el.product_id}`}><img className='pImg' src={el.product_img} alt='Product' /></Link>
+            <Link to={`/selectproduct/${el.product_id}`}><img className='pImg' src={el.product_img} alt='Product' /> 
+            <div className='viewBtn'>
+              <p className='View'>View</p>
+            </div>
+            </Link>
           </div>
 
           <div className='ProductBox'>
@@ -37,9 +42,13 @@ export default class Sea extends Component {
     })
 
     return (
-      <div className='ProdcAppSea'>
-        <NavBar />
-        <div className='Products'>{sea}</div>
+      <div>
+        <div className='ProdcAppSea'>
+          <NavBar />
+          <h1 className='CatName'>Sea</h1>
+          <div className='Products'>{sea}</div>
+        </div>
+        <Footer />
       </div>
     )
   }

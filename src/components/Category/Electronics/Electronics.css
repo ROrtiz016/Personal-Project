@@ -11,14 +11,18 @@ button{
 }
 
 .pName{
-  text-align: center;
-  color: white
+  text-align: center center center;
+  color: black;
+  width: 200px;
+  margin-left: -35px;
+  margin-top: 10px;
 }
 
 .pPrice{
   font-size: 18px;
-  text-align: center;
-  color: whitesmoke
+  text-align: center center;
+  color: black;
+  margin: 15px;
 }
 
 .imgbox{
@@ -28,26 +32,41 @@ button{
 }
 
 .ProdcApp{
-  background-image: url('http://sfwallpaper.com/images/hd-wallpapers-2560x1440-4.jpg');
+  /* background-image: url('http://sfwallpaper.com/images/hd-wallpapers-2560x1440-4.jpg'); */
   position: sticky;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 200vh;
+  height: 128vh;
 }
 
 .Products{
   display: flex;
   flex-wrap: wrap;
-  max-height: 175vh;
+  max-height: 100vh;
+  width: 100%;
+
+}
+
+.CatName{
+  position: relative;
+  top: 140px;
+  margin-left: 10%;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 800;
+  font-size: 34px;
 }
 
 .Boxes{
   margin: 20px;
   height: 105px;
-  width: 30%;
+  width: 20%;
   margin-top: 200px;
-
+  animation-name: box;
+  animation-duration: .4s;
+  position: relative;
+  left: 5%;
 }
+
 
 .ProductBox{
   margin: 5px;
@@ -56,6 +75,34 @@ button{
   margin-left: 37%;
   font-family: 'Raleway', sans-serif;
 }
+
+.viewBtn{
+  position: absolute;
+  height: 35px;
+  width: 90px;
+  background-color: gold;
+  display: flex;
+  justify-content: center;
+  top: 50%;
+  left: 40%; 
+  display: none;
+}
+
+.View{
+  margin-top: 8px;
+  color: black;
+}
+
+.Boxes:hover+.viewBtn{
+  display: inline-block;
+}
+
+@keyframes box{
+  0% {opacity: 0; top: 60px}
+  100% {opacity: 1; top: 0px}
+}
+
+
 
 @media (max-width: 500px){
 

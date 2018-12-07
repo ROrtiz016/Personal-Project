@@ -24,15 +24,19 @@ h2{
   margin-bottom: 20px;
 }
 
-p{
+.AbtCntct{
   font-family: 'Raleway', sans-serif;
   color: gray;
   font-size: 18px;
   margin-bottom: 20px;
-  transition: .5s
+  transition: .5s;
 }
 
-p:hover{
+.aboutContact{
+  text-decoration: none;
+}
+
+.AbtCntct:hover{
   cursor: pointer;
   color: white;
   transition: .5s

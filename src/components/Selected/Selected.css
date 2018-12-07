@@ -45,6 +45,13 @@
   background-color: gold;
   box-shadow: 1px 1px; 
   cursor: pointer;
+  transition: .5s;
+}
+
+.addToCart:hover{
+  background-color: blue;
+  color: gold;
+  transition: .5s;
 }
 
 .reviews{

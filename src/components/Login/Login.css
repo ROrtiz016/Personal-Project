@@ -74,6 +74,9 @@
   width: 100%;
   animation-name: fadeIn;
   animation-duration: 6s;
+  background-position: center center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 
 @keyframes login{

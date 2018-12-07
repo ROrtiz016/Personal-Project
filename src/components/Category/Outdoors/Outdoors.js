@@ -3,6 +3,7 @@ import axios from 'axios'
 import './Outdoors.css'
 import { Link } from 'react-router-dom'
 import NavBar from '../../NavBar/NavBar'
+import Footer from '../../Footer/Footer'
 
 export default class Outdoors extends Component {
   constructor() {
@@ -37,9 +38,13 @@ export default class Outdoors extends Component {
     })
 
     return (
-      <div className='ProdcAppOut'>
-        <NavBar />
-        <div className='Products'>{outdoors}</div>
+      <div>
+        <div className='ProdcAppOut'>
+          <NavBar />
+          <h1 className='CatName'>Outdoors</h1>
+          <div className='Products'>{outdoors}</div>
+        </div>
+        <Footer />
       </div>
     )
   }

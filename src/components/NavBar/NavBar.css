@@ -3,7 +3,8 @@
   width: 100%;
   background-color: rgba(3, 3, 3, 0.951);
   display: flex;
-  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: space-around;
   position: fixed;
   top:0px;
   z-index: 2;
@@ -20,17 +21,21 @@
 }
 
 .StoreName2{
-  margin-right: 60%;
+  margin-right: 30px;
   margin-top: 50px;
-  font-size: 24px;
+  font-size: 30px;
   text-shadow: 1px 1px black;
   color: gold;
   font-family: 'Raleway', sans-serif;
   position: relative;
-  left: 50px;
   bottom:25px;
   width: 300px;
   height: 30px;
+}
+
+.navButtons{
+  width: 500px;
+  display: flex;
 }
 
 @media (max-width: 500px){

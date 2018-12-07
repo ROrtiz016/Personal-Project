@@ -4,8 +4,7 @@ import snowboarding from '../imgs/snowboarding.jpg'
 import scuba from '../imgs/scuba.jpg'
 import biking from '../imgs/biking.jpg'
 import skate from '../imgs/skateboarding.png'
-// import TBallena from '../../img/TiburonBallena1.jpeg'
-// import Tortuga from '../../img/Tortuga1.jpeg'
+
 
 class Carousel extends Component {
 

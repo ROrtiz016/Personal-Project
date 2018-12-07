@@ -1,9 +1,9 @@
 .ProdcAppRid{
-  background-image: url('http://dasein.com.br/wp-content/uploads/2018/03/thumb-1920-345366.jpg');
-  position: sticky;
+  /* background-image: url('http://dasein.com.br/wp-content/uploads/2018/03/thumb-1920-345366.jpg');
+  position: sticky; */
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 200vh;
+  height: 100vh;
 
 }
 

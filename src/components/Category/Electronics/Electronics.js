@@ -3,6 +3,7 @@ import axios from 'axios'
 import './Electronics.css'
 import { Link } from 'react-router-dom'
 import NavBar from '../../NavBar/NavBar'
+import Footer from '../../Footer/Footer'
 
 export default class Electronics extends Component {
   constructor() {
@@ -23,7 +24,11 @@ export default class Electronics extends Component {
       return (
         <div key={el.product_id} className='Boxes'>
           <div className='imgbox'>
-            <Link to={`/selectproduct/${el.product_id}`}><img className='pImg' src={el.product_img} alt='Product' /></Link>
+            <Link to={`/selectproduct/${el.product_id}`}><img className='pImg' src={el.product_img} alt='Product' />
+            <div className='viewBtn'>
+              <p className='View'>View</p>
+            </div>
+            </Link>
           </div>
           <div className='ProductBox'>
             <h3 className='pName'>{el.product_name}</h3>
@@ -34,9 +39,13 @@ export default class Electronics extends Component {
     })
 
     return (
-      <div className='ProdcApp'>
-        <NavBar />
-        <div className='Products'>{electronics}</div>
+      <div>
+        <div className='ProdcApp'>
+          <NavBar />
+          <h1 className='CatName'>Electronics</h1>
+          <div className='Products'>{electronics}</div>
+        </div>
+        <Footer />
       </div>
     )
   }

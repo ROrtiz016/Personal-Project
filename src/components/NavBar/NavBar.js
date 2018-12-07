@@ -45,14 +45,15 @@ export default class NavBar extends Component {
         <div className={this.state.showNav ? 'show-nav mobile-nav' : 'mobile-nav'} >
           <nav className='nav2'>
             <h3 className='StoreName2'>BigBoysToys</h3>
-            <div></div>
-            <Link to='/Home'><button className='nav-button2'>Home</button></Link>
-            <Link to='/Cart'><button className='nav-button2'>Cart</button></Link>
-            <h3 onClick={this.login} className='nav-button2'>Login</h3>
-            <Link to='/Account'><button className='nav-button2'>Account</button></Link>
-            <a href={`${window.origin}/api/logout`}><button className='nav-button2' >Logout</button></a>
+            <div className='navButtons'>
+              <Link to='/Home'><button className='nav-button2'>Home</button></Link>
+              <Link to='/Cart'><button className='nav-button2'>Cart</button></Link>
+              <h3 onClick={this.login} className='nav-button2'>Login</h3>
+              <Link to='/Account'><button className='nav-button2'>Account</button></Link>
+              <a href={`${window.origin}/api/logout`}><button className='nav-button2' >Logout</button></a>
+            </div>
           </nav>
-          </div>
+        </div>
       </div>
     )
   }

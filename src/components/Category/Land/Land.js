@@ -3,6 +3,7 @@ import axios from 'axios'
 import './Land.css'
 import { Link } from 'react-router-dom'
 import NavBar from '../../NavBar/NavBar'
+import Footer from '../../Footer/Footer'
 
 export default class Land extends Component {
   constructor() {
@@ -35,9 +36,13 @@ export default class Land extends Component {
     })
 
     return (
-      <div className='ProdcAppLand'>
-        <NavBar />
-        <div className='Products'>{land}</div>
+      <div>
+        <div className='ProdcAppLand'>
+          <NavBar />
+          <h1 className='CatName'>Land</h1>
+          <div className='Products'>{land}</div>
+        </div>
+        <Footer />
       </div>
     )
   }

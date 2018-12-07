@@ -1,9 +1,9 @@
 .ProdcAppGad{
-  background-image: url('https://images7.alphacoders.com/313/313727.jpg');
-  position: sticky;
+  /* background-image: url('https://images7.alphacoders.com/313/313727.jpg');
+  position: sticky; */
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: 200vh;
+  height: 125vh;
 }
 
 @media (max-width: 500px){

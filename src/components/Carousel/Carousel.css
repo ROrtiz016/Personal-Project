@@ -1,7 +1,7 @@
 .slideImage{
   max-width: 100%;
   width: 100%;
-  height: 99.73vh;
+  height: 40vh;
 }
 
 .dots{
@@ -92,7 +92,7 @@
   animation-duration: 5s;
 }
 
-@-webkit-keyframes fade {
+/* @-webkit-keyframes fade {
   from {opacity: 1} 
   to {opacity: .5}
 }
@@ -100,4 +100,4 @@
 @keyframes fade {
   from {opacity: .5} 
   to {opacity: 1}
-}
+} */

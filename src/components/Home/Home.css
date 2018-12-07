@@ -13,7 +13,8 @@
   background-image: url(https://demo.themegrill.com/explore/wp-content/uploads/sites/47/2016/06/travel-1233762_1920-e1466592103871.jpg);
   background-repeat: no-repeat;
   height: 70vh;
-  width: 100%;
+  max-width: 100%;
+  min-width: 100%;
   background-attachment: fixed;
   background-position: center center; 
 } 
@@ -22,7 +23,7 @@
   height: 60vh;
   width: 1200px;
   position: relative;
-  left: 400px;
+  left: 20%;
   animation-name: CatContainer;
   animation-duration: 2s
 }

@@ -15,6 +15,8 @@ import Riding from './components/Category/Riding/Riding'
 import Selected from './components/Selected/Selected'
 import Cart from './components/Cart/Cart'
 import Account from './components/Account/Account'
+import About from './components/About/About2'
+import Contact from './components/Contact/Contact1'
 
 class App extends Component {
   componentDidMount(){
@@ -37,6 +39,8 @@ class App extends Component {
           <Route path='/selectproduct/:id' component={Selected} />
           <Route path='/cart' component={Cart} />
           <Route path='/account' component={Account}/>
+          <Route path='/about' component={About}/>
+          <Route path='/contact' component={Contact}/>
           
         </Switch>
       </HashRouter>
