@@ -6,7 +6,7 @@ const massive = require('massive')
 const axios = require('axios')
 const controller = require('./controllers')
 const mid = require('./middleware');
-const bodyParser = require('body-parser')
+// const bodyParser = require('body-parser')
 
 app.use(express.static(`${__dirname}/../build`));
 

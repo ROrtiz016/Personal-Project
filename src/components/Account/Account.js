@@ -9,8 +9,8 @@ import PopUp from '../Modal/PopUp'
 
 class Account extends Component {
 
-  componentDidMount(){
-    axios.get('/api/user-data').then(res=>{
+  componentDidMount() {
+    axios.get('/api/user-data').then(res => {
       this.props.getUserData(res.data)
     })
   }
@@ -20,21 +20,26 @@ class Account extends Component {
     return (
       <div className='backimg'>
         <div>
-          <NavBar/>
+          <NavBar />
         </div>
-          <div className='InfoBox'>
-          <h2 className='AccntInfo01'>Account Information</h2>
-          <div className='picContnr'>
-          <img src={user.user_pic} className='userPic' alt='userImg'/>
+
+        <div className='InfoBox'>
+          <div className='sections'>
+            <p className='AccntInfo01'>My Account</p>
+            <div className='picContnr'>
+              <img src={user.user_pic} className='userPic' alt='userImg' />
+            </div>
+            <div className='info'>
+              <h4 className='AccntInfo2'>User: {user.user_name}</h4>
+              <p className='AccntInfo2'>email: {user.user_email}</p>
+              <p className='AccntInfo2'>age: {user.user_age}</p>
+              <p className='AccntInfo2'>address: {user.user_address}</p>
+              <PopUp />
+            </div>
           </div>
-        <div className='info'>
-          <h4 className='AccntInfo2'>User: {user.user_name}</h4>
-          <p className='AccntInfo2'>email: {user.user_email}</p>
-          <p className='AccntInfo2'>age: {user.user_age}</p>
-          <p className='AccntInfo2'>address: {user.user_address}</p>
-          <PopUp
-          
-                 />
+
+          <div className='Orders'>
+            <p className='AccntInfo01'>Order History</p>
           </div>
         </div>
       </div>
@@ -44,7 +49,7 @@ class Account extends Component {
 
 function mapStateToProps(state) {
   return {
-   user: state.users.user
+    user: state.users.user
   }
 }
 

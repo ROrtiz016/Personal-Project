@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 export default class NavBar extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       user: null,
       toggleAnimation: false
@@ -38,6 +38,22 @@ export default class NavBar extends Component {
     window.location = `https://${REACT_APP_DOMAIN}/authorize?client_id=${REACT_APP_CLIENT_ID}&scope=openid%20profile%20email&redirect_uri=${redirectIUri}&response_type=code`;
   }
 
+  checkUserLog(){
+    axios.get('/api/user-data').then(res => {
+      let {FRONTEND_DOMAIN } = process.env
+      if(res.data.id){
+        console.log(res.data)
+        return (
+          window.location = `${FRONTEND_DOMAIN}/#/account`
+        )
+      }else{
+        return(
+          this.login()
+        )
+      }
+    })
+  }
+
   render() {
     return (
       <div>
@@ -49,7 +65,7 @@ export default class NavBar extends Component {
               <Link to='/Home'><button className='nav-button2'>Home</button></Link>
               <Link to='/Cart'><button className='nav-button2'>Cart</button></Link>
               <h3 onClick={this.login} className='nav-button2'>Login</h3>
-              <Link to='/Account'><button className='nav-button2'>Account</button></Link>
+              <button className='nav-button2' onClick={this.checkUserLog}>Account</button>
               <a href={`${window.origin}/api/logout`}><button className='nav-button2' >Logout</button></a>
             </div>
           </nav>
