@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom'
 import { connect } from 'react-redux'
 import { getUserData } from './dux/users'
-import axios from 'axios'
 import './reset.css';
 import Login from './components/Login/Login'
 import Home from './components/Home/Home'
@@ -19,11 +18,6 @@ import About from './components/About/About2'
 import Contact from './components/Contact/Contact1'
 
 class App extends Component {
-  componentDidMount(){
-    axios.get('/api/user-data')
-    .then( user => this.props.getUserData(user.data))
-    .catch( err => console.log(err))
-  }
   render() {
     return (
       <HashRouter>

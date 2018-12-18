@@ -7,7 +7,6 @@ class Footer extends Component {
   render() {
     return (
       <div>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous"></link>
         <div className='footer'>
           <div>
             <h2>COMPANY</h2>
@@ -17,7 +16,7 @@ class Footer extends Component {
 
           <div>
             <h2>FOLLOW US</h2>
-            <img src="http://www.stickpng.com/assets/images/580b57fcd9996e24bc43c53e.png" alt="twitter" className='social' />
+            <img src="https://www.sketchappsources.com/resources/source-image/twitterlogo_1x.png" alt="twitter" className='social' />
             <img src="https://www.secondhelpings.org/wp-content/uploads/2017/07/social_facebook_second_helpings.png" alt="facebook" className='social' />
             <img src="https://vignette.wikia.nocookie.net/riverdalearchie/images/a/a5/Instagram_icon.png/revision/latest?cb=20170607174004" alt="instagram" className='social' />
           </div>
