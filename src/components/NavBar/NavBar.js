@@ -11,6 +11,8 @@ export default class NavBar extends Component {
       toggleAnimation: false
     };
     this.logout = this.logout.bind(this);
+    this.login = this.login.bind(this);
+    this.checkUserLog = this.checkUserLog.bind(this);
   }
 
   toggleNav() {
@@ -39,17 +41,14 @@ export default class NavBar extends Component {
   }
 
   checkUserLog(){
-    axios.get('/api/user-data').then(res => {
+    axios.get('/api/user-data2').then(res => {
       let {FRONTEND_DOMAIN } = process.env
       if(res.data.id){
-        console.log(res.data)
         return (
           window.location = `${FRONTEND_DOMAIN}/#/account`
         )
       }else{
-        return(
-          this.login()
-        )
+         return this.login()
       }
     })
   }

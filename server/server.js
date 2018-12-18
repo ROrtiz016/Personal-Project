@@ -34,7 +34,7 @@ massive(CONNECTION_STRING).then(db => {
   console.log('DB connected')
 })
 app.use(express.json())
-app.use(mid.bypassAuthInDevelopment)
+// app.use(mid.bypassAuthInDevelopment)
 
 
 app.get('/auth/callback', async (req, res) => {
@@ -71,6 +71,14 @@ app.get('/api/user-data', (req, res) => {
     res.status(200).send(req.session.user)
   } else {
     res.status(401).send('Nice try sucka')
+  }
+});
+
+app.get('/api/user-data2', (req, res) => {
+  if (req.session.user) {
+    res.status(200).send(req.session.user)
+  } else {
+    res.status(200).send(req.session)
   }
 });
 
