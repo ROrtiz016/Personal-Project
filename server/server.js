@@ -77,8 +77,12 @@ app.get('/api/user-data', (req, res) => {
 app.get('/api/userData', (req, res) => {
   if (req.session.user) {
     res.status(200).send(req.session.user)
-  } else {
+    console.log(req.session.user)
+  } else if(!req.session.user){
     res.status(200).send(req.session)
+    console.log(req.session)
+  }else{
+    res.status(401).send('Not Today')
   }
 });
 
