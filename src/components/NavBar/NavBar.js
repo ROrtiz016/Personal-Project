@@ -41,7 +41,7 @@ export default class NavBar extends Component {
   }
 
   checkUserLog(){
-    axios.get('/api/user-data2').then(res => {
+    axios.get('/api/userData').then(res => {
       let {FRONTEND_DOMAIN } = process.env
       if(res.data.id){
         return (

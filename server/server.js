@@ -74,7 +74,7 @@ app.get('/api/user-data', (req, res) => {
   }
 });
 
-app.get('/api/user-data2', (req, res) => {
+app.get('/api/userData', (req, res) => {
   if (req.session.user) {
     res.status(200).send(req.session.user)
   } else {
