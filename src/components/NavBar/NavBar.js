@@ -51,6 +51,7 @@ export default class NavBar extends Component {
          return this.login()
       }
     })
+    .catch(err => console.log(err))
   }
 
   render() {
