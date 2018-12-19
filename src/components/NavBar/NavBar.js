@@ -41,8 +41,8 @@ export default class NavBar extends Component {
   }
 
   checkUserLog(){
-    axios.get('/api/userData').then(res => {
-      let {FRONTEND_DOMAIN } = process.env
+    axios.get('/api/userreqdata').then(res => {
+      let {FRONTEND_DOMAIN} = process.env
       if(res.data.id){
         return (
           window.location = `${FRONTEND_DOMAIN}/#/account`
