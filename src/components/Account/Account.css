@@ -1,17 +1,33 @@
 .userPic{
   height: 175px;
-  widows: 100px;
+  /* width: 175px; */
   border-radius: 50px;
-  margin: 10px;
+  position: relative;
+  bottom: 24px;
+  z-index: 2;
 }
 
 .picContnr{
-  width: 150px;
+  width: 177px;
+  height: 177px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
+  flex-direction: column;
   margin-bottom: 30px;
   position: relative;
-  left: 14%;
+  border: 1px solid gold;
+  left: 16%;
+  border-radius: 50px;
+}
+
+.pleaseLog{
+ font-family: 'Raleway', sans-serif;
+ text-align: center;
+ color:  white;
+ margin-left: 15px;
+ z-index: 1;
+ position: relative;
+ top: 25px;
 }
 
 .info{
@@ -69,6 +85,7 @@
   width: 100%;
   display: flex;
 }
+
 
 @media (max-width: 500px){
   .backimg{

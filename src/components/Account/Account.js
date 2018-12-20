@@ -27,7 +27,8 @@ class Account extends Component {
           <div className='sections'>
             <p className='AccntInfo01'>My Account</p>
             <div className='picContnr'>
-              <img src={user.user_pic} className='userPic' alt='userImg' />
+              <p className='pleaseLog'>Please Login to display your account information</p>
+              <img src={user.user_pic} className='userPic' />
             </div>
             <div className='info'>
               <h4 className='AccntInfo2'>User: {user.user_name}</h4>

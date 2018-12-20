@@ -12,7 +12,7 @@ export default class NavBar extends Component {
     };
     this.logout = this.logout.bind(this);
     this.login = this.login.bind(this);
-    this.checkUserLog = this.checkUserLog.bind(this);
+    // this.checkUserLog = this.checkUserLog.bind(this);
   }
 
   toggleNav() {
@@ -40,19 +40,19 @@ export default class NavBar extends Component {
     window.location = `https://${REACT_APP_DOMAIN}/authorize?client_id=${REACT_APP_CLIENT_ID}&scope=openid%20profile%20email&redirect_uri=${redirectIUri}&response_type=code`;
   }
 
-  checkUserLog(){
-    axios.get('/api/userreqdata').then(res => {
-      let {FRONTEND_DOMAIN} = process.env
-      if(res.data.id){
-        return (
-          window.location = `${FRONTEND_DOMAIN}/#/account`
-        )
-      }else{
-         return this.login()
-      }
-    })
-    .catch(err => console.log(err))
-  }
+  // checkUserLog(){
+  //   axios.get('/api/userreqdata').then(res => {
+  //     let {FRONTEND_DOMAIN} = process.env
+  //     if(res.data.id){
+  //       return (
+  //         window.location = `${FRONTEND_DOMAIN}/#/account`
+  //       )
+  //     }else{
+  //        return this.login()
+  //     }
+  //   })
+  //   .catch(err => console.log(err))
+  // }
 
   render() {
     return (
@@ -65,7 +65,8 @@ export default class NavBar extends Component {
               <Link to='/Home'><button className='nav-button2'>Home</button></Link>
               <Link to='/Cart'><button className='nav-button2'>Cart</button></Link>
               <h3 onClick={this.login} className='nav-button2'>Login</h3>
-              <button className='nav-button2' onClick={this.checkUserLog}>Account</button>
+              {/* <button className='nav-button2' onClick={this.checkUserLog}>Account</button> */}
+              <Link to='/account'><button className='nav-button2'>Account</button></Link>
               <a href={`${window.origin}/api/logout`}><button className='nav-button2' >Logout</button></a>
             </div>
           </nav>
