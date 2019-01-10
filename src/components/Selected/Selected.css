@@ -1,7 +1,14 @@
 .SelImg{
   width: 450px;
   margin-left: 150px; 
-  float: left;
+  position: absolute;
+  animation-name: image;
+  animation-duration: 1s;
+}
+
+@keyframes image{
+  0%{ left: -450px}
+  100%{left: 0px}
 }
 
 .SelectDiv{
