@@ -28,7 +28,7 @@ class Account extends Component {
             <p className='AccntInfo01'>My Account</p>
             <div className='picContnr'>
               <p className='pleaseLog'>Please Login to display your account information</p>
-              <img src={user.user_pic} className='userPic' />
+              <img src={user.user_pic} className='userPic' alt=''/>
             </div>
             <div className='info'>
               <h4 className='AccntInfo2'>User: {user.user_name}</h4>
@@ -39,9 +39,9 @@ class Account extends Component {
             </div>
           </div>
 
-          <div className='Orders'>
+          {/* <div className='Orders'>
             <p className='AccntInfo01'>Order History</p>
-          </div>
+          </div> */}
         </div>
       </div>
     )

@@ -63,8 +63,8 @@ export default class NavBar extends Component {
             <h3 className='StoreName2'>BigBoysToys</h3>
             <div className='navButtons'>
               <Link to='/Home'><button className='nav-button2'>Home</button></Link>
+              <button onClick={this.login} className='nav-button3'>Login</button>
               <Link to='/Cart'><button className='nav-button2'>Cart</button></Link>
-              <h3 onClick={this.login} className='nav-button2'>Login</h3>
               {/* <button className='nav-button2' onClick={this.checkUserLog}>Account</button> */}
               <Link to='/account'><button className='nav-button2'>Account</button></Link>
               <a href={`${window.origin}/api/logout`}><button className='nav-button2' >Logout</button></a>

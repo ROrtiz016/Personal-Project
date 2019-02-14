@@ -88,6 +88,8 @@ class Cart extends Component {
   }
 
   onClosed = () => {
+    // axios.post('/api/order')
+
     axios.delete('/api/delcart')
       .then(response => { this.props.removeFromCart(response.data) })
       .then(notify.show('Awesomeness is on it\'s way!', 'success', 2500))

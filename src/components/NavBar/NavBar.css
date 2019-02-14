@@ -8,6 +8,7 @@
   position: fixed;
   top:0px;
   z-index: 2;
+  align-items: center;
 }
 
 .nav-button2{
@@ -16,8 +17,18 @@
   border:none;
   background-color: transparent;
   font-family: 'Raleway', sans-serif;
-  padding: 25px;
   cursor: pointer;
+  margin-left: 30px;
+}
+
+.nav-button3{
+  color: white;
+  font-size: 20px;
+  border:none;
+  background-color: transparent;
+  font-family: 'Raleway', sans-serif;
+  cursor: pointer;
+  margin-left: 30px;
 }
 
 .StoreName2{
